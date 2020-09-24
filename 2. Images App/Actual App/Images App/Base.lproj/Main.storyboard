@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Images_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CKk-Aw-dxM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cbn-bY-tSm">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxE-TW-oOn" customClass="CardSuperView" customModule="Images_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="608"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="D0z-gm-9Xf" customClass="SideBySideCardSuperView" customModule="Images_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="608" width="414" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="g5a-nr-U9U"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cbn-bY-tSm" firstAttribute="leading" secondItem="lFf-fB-1dq" secondAttribute="leading" id="49l-Zr-ReL"/>
+                            <constraint firstItem="lFf-fB-1dq" firstAttribute="trailing" secondItem="cbn-bY-tSm" secondAttribute="trailing" id="eug-9S-GUP"/>
+                            <constraint firstItem="cbn-bY-tSm" firstAttribute="top" secondItem="lFf-fB-1dq" secondAttribute="top" constant="40" id="hh8-mq-bNe"/>
+                            <constraint firstItem="lFf-fB-1dq" firstAttribute="bottom" secondItem="cbn-bY-tSm" secondAttribute="bottom" id="xwj-O6-qSR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lFf-fB-1dq"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardSuperView" destination="sxE-TW-oOn" id="Eba-bL-Bqs"/>
+                        <outlet property="sideBySideCardSuperView" destination="D0z-gm-9Xf" id="mjA-sQ-NtJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="18.75"/>
+        </scene>
+    </scenes>
+</document>
